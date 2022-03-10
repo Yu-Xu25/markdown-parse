@@ -22,7 +22,7 @@ public class MarkdownParseTestSnippets {
     @Test
     public void testSnippet2() throws IOException{
         String fileName = "/Users/yuxu/Documents/GitHub/markdown-parse/snippet2.md";
-        List<String> expected = List.of("a.com(())", "example.com");
+        List<String> expected = List.of("a.com","a.com(())", "example.com");
         
         assertEquals(expected, MarkdownParse.getLinks(Files.readString(Path.of(fileName))));
 
